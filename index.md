@@ -1,37 +1,39 @@
-## Welcome to GitHub Pages
+# Laravel-Qibla 
+- a laravel package to get the Qiblaa direction based on given cords or user location (based on analysing the IP service from geoplugin.net )
 
-You can use the [editor on GitHub](https://github.com/adnane-ka/laravel-qibla/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+# installation 
+- via composer : 
+``` 
+composer require adnane/laravel-qibla
+```
+- the package's service provider will be auto-loaded as you can add it in ```config\app.php``` in the providers array 
+```php 
+'providers' => [
+    ..
+    'Adnane\Qibla\QiblaServiceProvider',
+],
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+# example of use 
+```php 
+use Adnane\Qibla\Qibla;
 
-### Jekyll Themes
+// get Qibla direction based on user location 
+echo Qibla::getDirection();
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/adnane-ka/laravel-qibla/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+// As you can specify a longitude & latitude to calculate the Qibla direction from 
+echo Qibla::getDirection($longitude , $latitude); 
+```
+# use in blade files
 
-### Support or Contact
+``` 
+Hey User .. The kibla direction is about @qibla(36.6862,6.3633) ° North 
+```
+# how to interpretate the results 
+- as mentioned ,Results are angles returned in degree scale : ex (108.2323° north) , so this can be easy to be handled using a degree compass or a front-end simple logic to achieve that.  
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+![image](https://www.pngarea.com/pngs/3/5012644_compass-png-boxing-the-compass-with-degree-png.png)
+
+
+# See also  
+[Laravel Speaks Arabic](https://github.com/adnane-ka/laravel-speaks-arabic)
