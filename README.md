@@ -2,6 +2,17 @@
 - a laravel package to get the Qiblaa direction based on given cords or user location (based on analysing the IP service from geoplugin.net )
 
 # installation 
+- via composer : 
+``` 
+composer require adnane/laravel-qibla
+```
+- the package's service provider will be auto-loaded as you can add it in ```config\app.php``` in the providers array 
+```php 
+'providers' => [
+    ..
+    'Adnane\Qibla\QiblaServiceProvider',
+],
+```
 
 # example of use 
 ```php 
@@ -15,7 +26,7 @@ echo Qibla::getDirection($longitude , $latitude);
 ```
 # use in blade files
 
-```php 
+``` 
 Hey User .. The kibla direction is about @qibla(36.6862,6.3633) ° North 
 ```
 # how to interpretate the results 
