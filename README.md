@@ -27,7 +27,7 @@ echo Qibla::getDirection($longitude , $latitude);
 # use in blade files
 
 ``` 
-Hey User .. The kibla direction is about @qibla(36.6862,6.3633) ° North 
+Hey User .. The kibla direction is about @qibla() ° North 
 ```
 # how to interpretate the results 
 - as mentioned ,Results are angles returned in degree scale : ex (108.2323° north) , so this can be easy to be handled using a degree compass or a front-end simple logic to achieve that.  
