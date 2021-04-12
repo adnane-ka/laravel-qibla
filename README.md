@@ -1,5 +1,5 @@
 # Laravel-Qibla 
-- a laravel package to get the Qiblaa direction based on given cords or user location (based on analysing the IP service from geoplugin.net )
+- a laravel package to get the Qiblaa direction based on given cords or user location 
 
 # installation 
 - via composer : 
