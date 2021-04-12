@@ -1,0 +1,18 @@
+{
+    "name": "adnane/laravel-qibla",
+    "description": "A laravel Package to get qibla directionns",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "adnane-ka",
+            "email": "dannykadri0@gmail.com",
+            "role":"Developer"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Adnane\\Qibla\\": "/src"
+        }
+    }
+}
