@@ -14,7 +14,7 @@ composer require adnane/laravel-qibla
 ],
 ```
 
-# example of use 
+# Usage
 ```php 
 use Adnane\Qibla\Qibla;
 
@@ -24,7 +24,7 @@ echo Qibla::getDirection();
 // As you can specify a longitude & latitude to calculate the Qibla direction from 
 echo Qibla::getDirection($longitude , $latitude); 
 ```
-# use in blade files
+# Usage in blade files
 
 ``` 
 Hey User .. The kibla direction is about @qibla() ° North 
